@@ -41,13 +41,6 @@ Rectangle {
         color: "black"
     }
 
-    // Set Background Image
-    Image {
-        anchors.fill: parent
-        source: config.background
-        fillMode: Image.PreserveAspectCrop
-    }
-
     // Set Background Video1
     MediaPlayer {
         id: mediaplayer1
@@ -485,4 +478,3 @@ Rectangle {
         clear_passwd_button.visible = false
     }
 }
-
