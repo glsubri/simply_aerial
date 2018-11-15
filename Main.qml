@@ -455,10 +455,10 @@ Rectangle {
 
     Component.onCompleted: {
         // Set Focus
-        /* if (username_input_box.text == "") */
-        /*     username_input_box.focus = true */
-        /* else */
-        /*     password_input_box.focus = true */
+        if (username_input_box.text == "")
+            username_input_box.focus = true
+        else
+            password_input_box.focus = true
 
         video1.focus = true
 
