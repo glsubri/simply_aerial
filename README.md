@@ -2,12 +2,19 @@
 
 SDDM theme with Apple TV Aerial videos
 
-Videos are played randomly and diferent playlists are used based on time of day (only day and night diferenciation, night between 5pm - 5am) its possible to tweak to have more time diferentiation, the one used is provided with the videos.
+Videos are played randomly and diferent playlists are used based on time of day (only day and night
+diferenciation, night between 5pm - 5am) its possible to tweak to have more time diferentiation,
+the one used is provided with the videos.
+
+The goal of this fork is to keep the theme as simple as possible and with very few dependencies.
+Thanks to 3ximus for his original [aerial-sddm-theme](https://github.com/3ximus/aerial-sddm-theme).
 
 
 ### Dependencies
 
-It is necessary to have the Phonon GStreamer backend for qt5, GStreamer ffmpeg Plugin and GStreamer Plugins Good
+It is necessary to have the Phonon GStreamer backend for qt5, GStreamer ffmpeg Plugin and
+GStreamer Plugins Good.
+
 - For Arch linux : `pacman -S gst-libav phonon-qt5-gstreamer gst-plugins-good`
 - For Gentoo : these settings allowed me to make the theme work
 
@@ -15,14 +22,12 @@ It is necessary to have the Phonon GStreamer backend for qt5, GStreamer ffmpeg P
     * `USE="alsa gsteamer qml widgets" dev-qt/qtmultimedia`
     * `USE="gstreamer" media-libs/phonon`
 
-Havent tryed for other distros...
-
 ### Installation
 
 Simply clone the repository and copy it to `/usr/share/sddm/themes/` like this:
 ```
-git clone git@github.com:3ximus/aerial-sddm-theme.git
-mv aerial-sddm-theme /usr/share/sddm/themes
+git clone git@github.com:glsubri/simply_aerial.git
+mv simply_aerial /usr/share/sddm/themes
 ```
 *Note that super user priviledges are needed to move files into that directory.*
 
@@ -31,9 +36,11 @@ The theme can be tested by running `sddm-greeter --test-mode --theme <path-to-th
 ### Other notes
 
 This theme streams the HD videos so a good internet connection is necessary.
-If there is no active connection or the video can't be played the background will fallback to the image background.jpg
+If there is no active connection or the video can't be played the background will fallback to the
+image `background.jpg`.
 
-If you wish to play local videos files just use the following command to generate the playlist-file (playlist_day.m3u or playlist_night.m3u) from a directory containing the videos:
+If you wish to play local videos files just use the following command to generate the playlist-file
+(`playlist_day.m3u` or `playlist_night.m3u`) from a directory containing the videos:
 
 `find <path-to-your-directory> -maxdepth 1 -type f > <playlist-file>`
 
@@ -52,8 +59,10 @@ You can change a few settings in this file
 - `background_day` and `background_night` - video playlists
 - `displayFont` - font
 - `showLoginButton` - if set to false will hide the login button
-- `showClearPasswordButton` - if set to false will hide the clear password button that appears when text is inputed
-- `passwordLeftMargin` and `usernameLeftMargin` - set margin between input boxes and labels, some fonts are messy and allows fixing of overlap
+- `showClearPasswordButton` - if set to false will hide the clear password button that appears
+when text is inputed
+- `passwordLeftMargin` and `usernameLeftMargin` - set margin between input boxes and labels, some
+fonts are messy and allows fixing of overlap
 - `relativePositionX` and `relativePositionY` - position the login text box and clock
 
 Example config (not the same as the screenshots):
